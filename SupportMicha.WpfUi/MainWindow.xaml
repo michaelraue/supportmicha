@@ -1,0 +1,34 @@
+﻿<Window x:Class="SupportMicha.WpfUi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:signUp="clr-namespace:SupportMicha.WpfUi.SignUp"
+        xmlns:supporterList="clr-namespace:SupportMicha.WpfUi.SupporterList"
+        mc:Ignorable="d"
+        Title="Support Michael"
+        Height="1024" MinHeight="1024" MinWidth="1000" Width="1000"
+        Style="{StaticResource MaterialDesignWindow}"
+        >
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.LayoutTransform>
+            <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+        </Grid.LayoutTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"
+                BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Margin="5" Padding="10"
+                MinHeight="300">
+            <signUp:SignUpControl/>
+        </Border>
+        <Border Grid.Row="1" VerticalAlignment="Stretch"
+                BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Margin="5" Padding="10">
+            <supporterList:SupporterListControl/>
+        </Border>
+    </Grid>
+</Window>

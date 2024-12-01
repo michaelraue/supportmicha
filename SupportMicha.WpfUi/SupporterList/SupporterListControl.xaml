@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="SupportMicha.WpfUi.SupporterList.SupporterListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:presentation="clr-namespace:SupportMicha.WpfUi"
+             xmlns:shared="clr-namespace:SupportMicha.WpfUi.Shared"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <shared:EnumDisplayNameConverter x:Key="EnumDisplayNameConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Margin="10" TextAlignment="Left" FontWeight="Bold">
+            Happy people already supporting Michael:
+        </TextBlock>
+        <DataGrid Grid.Row="1" Margin="10" ItemsSource="{Binding Supporters}" AutoGenerateColumns="False"
+                  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Salutation" Binding="{Binding Salutation, Converter={StaticResource EnumDisplayNameConverter}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email" Binding="{Binding EmailAddress}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

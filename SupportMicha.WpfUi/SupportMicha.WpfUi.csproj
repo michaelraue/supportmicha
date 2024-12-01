@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommunityToolkit.Mvvm" />
+      <PackageReference Include="MaterialDesignThemes" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+      <PackageReference Include="System.Reactive" />
+      <PackageReference Include="Bogus" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SupportMicha.ApiInterface\SupportMicha.ApiInterface.csproj" />
+    </ItemGroup>
+
+</Project>

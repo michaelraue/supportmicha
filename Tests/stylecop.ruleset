@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="stylecop.ruleset" Description=" " ToolsVersion="17.0">
+    <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.SpecialRules">
+        <Rule Id="SA0001" Action="None"/>             <!-- XML comment analysis disabled -->
+    </Rules>
+</RuleSet>
